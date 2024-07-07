@@ -11,7 +11,25 @@ struct RootContentView: View {
     @StateObject private var viewModel = RootContentViewModel()
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Group {
+            if viewModel.showPreloader {
+                PreloaderView()
+            } else {
+                switch viewModel.viewState {
+                case .onboarding:
+                    OnboardingViewTabView()
+                        .environmentObject(viewModel)
+                case .main:
+                    Text("main")
+                        .environmentObject(viewModel)
+                }
+            }
+        }
+        .onAppear {
+            withAnimation {
+                self.viewModel.getFlow()
+            }
+        }
     }
 }
 
