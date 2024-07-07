@@ -26,6 +26,10 @@ internal enum Asset {
   internal static let onboarding2 = ImageAsset(name: "onboarding2")
   internal static let onboarding3 = ImageAsset(name: "onboarding3")
   internal static let onboardingBlank = ImageAsset(name: "onboardingBlank")
+  internal static let projectsTab = ImageAsset(name: "projectsTab")
+  internal static let roiTab = ImageAsset(name: "roiTab")
+  internal static let settingsTab = ImageAsset(name: "settingsTab")
+  internal static let taxesTab = ImageAsset(name: "taxesTab")
   internal static let launch = ImageAsset(name: "launch")
   internal static let logo = ImageAsset(name: "logo")
 }
