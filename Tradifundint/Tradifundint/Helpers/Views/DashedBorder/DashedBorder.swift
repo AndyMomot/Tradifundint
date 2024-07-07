@@ -14,7 +14,7 @@ struct DashedBorder: View {
     var cornerRadius: CGFloat
     
     init(color: Color = Colors.firuza.swiftUIColor,
-         lineWidth: CGFloat = 4, 
+         lineWidth: CGFloat = 3,
          dash: [CGFloat] = [10, 10],
          cornerRadius: CGFloat = 10) {
         self.color = color

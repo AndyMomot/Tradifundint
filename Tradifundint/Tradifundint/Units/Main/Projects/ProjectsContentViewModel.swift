@@ -9,6 +9,7 @@ import Foundation
 
 extension ProjectsContentView {
     final class ProjectsContentViewModel: ObservableObject {
-        
+        @Published var showSearchButton = true
+        @Published var searchText = ""
     }
 }

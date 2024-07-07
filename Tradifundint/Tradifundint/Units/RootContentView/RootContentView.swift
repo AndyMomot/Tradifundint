@@ -20,7 +20,7 @@ struct RootContentView: View {
                     OnboardingViewTabView()
                         .environmentObject(viewModel)
                 case .main:
-                    Text("main")
+                    TabBar()
                         .environmentObject(viewModel)
                 }
             }
