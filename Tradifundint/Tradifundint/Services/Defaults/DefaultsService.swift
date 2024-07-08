@@ -24,6 +24,40 @@ extension DefaultsService {
 }
 
 extension DefaultsService {
+    static var projects: [AddProjectView.ProjectModel] {
+        get {
+            if let data = standard.object(forKey: Keys.projects.rawValue) as? Data {
+                let items = try? JSONDecoder().decode([AddProjectView.ProjectModel].self, from: data)
+                return items ?? []
+            }
+            return []
+        }
+        set {
+            let items = newValue.sorted(by: { $0.dateCreated > $1.dateCreated })
+            if let data = try? JSONEncoder().encode(items) {
+                standard.setValue(data, forKey: Keys.projects.rawValue)
+            }
+        }
+    }
+    
+    static func addProject(item: AddProjectView.ProjectModel) {
+        var items = projects
+        items.append(item)
+        projects = items
+    }
+    
+    static func deleteProject(item: AddProjectView.ProjectModel) {
+        if let index = projects.firstIndex(where: {
+            $0.id == item.id
+        }) {
+            var items = projects
+            items.remove(at: index)
+            projects = items
+        }
+    }
+}
+
+extension DefaultsService {
     static func removeAll() {
         if let bundleIdentifier = Bundle.main.bundleIdentifier {
             standard.removePersistentDomain(forName: bundleIdentifier)
@@ -35,5 +69,6 @@ extension DefaultsService {
 extension DefaultsService {
     enum Keys: String {
         case flow
+        case projects
     }
 }

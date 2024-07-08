@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		477EBCFF2C3BCC9600D3209E /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477EBCFE2C3BCC9600D3209E /* AddProjectView.swift */; };
+		477EBD012C3BCCA000D3209E /* AddProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477EBD002C3BCCA000D3209E /* AddProjectViewModel.swift */; };
+		477EBD042C3BDA0A00D3209E /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477EBD032C3BDA0A00D3209E /* InputField.swift */; };
+		477EBD0A2C3C1BDE00D3209E /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477EBD092C3C1BDE00D3209E /* String+Additions.swift */; };
 		47D13A8A2C3A932E0062A4B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D13A892C3A932E0062A4B3 /* AppDelegate.swift */; };
 		47D13A8C2C3A932E0062A4B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D13A8B2C3A932E0062A4B3 /* SceneDelegate.swift */; };
 		47D13A8E2C3A932E0062A4B3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D13A8D2C3A932E0062A4B3 /* RootViewController.swift */; };
@@ -51,6 +55,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		477EBCFE2C3BCC9600D3209E /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
+		477EBD002C3BCCA000D3209E /* AddProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewModel.swift; sourceTree = "<group>"; };
+		477EBD032C3BDA0A00D3209E /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
+		477EBD092C3C1BDE00D3209E /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		47D13A862C3A932E0062A4B3 /* Tradifundint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tradifundint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D13A892C3A932E0062A4B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47D13A8B2C3A932E0062A4B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +115,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		477EBCFC2C3BCC6600D3209E /* ProjectsList */ = {
+			isa = PBXGroup;
+			children = (
+				47D13AFD2C3AC5C70062A4B3 /* ProjectsContentView.swift */,
+				47D13AFF2C3AC5E30062A4B3 /* ProjectsContentViewModel.swift */,
+			);
+			path = ProjectsList;
+			sourceTree = "<group>";
+		};
+		477EBCFD2C3BCC7900D3209E /* AddProject */ = {
+			isa = PBXGroup;
+			children = (
+				477EBCFE2C3BCC9600D3209E /* AddProjectView.swift */,
+				477EBD002C3BCCA000D3209E /* AddProjectViewModel.swift */,
+			);
+			path = AddProject;
+			sourceTree = "<group>";
+		};
+		477EBD022C3BD9DF00D3209E /* InputField */ = {
+			isa = PBXGroup;
+			children = (
+				477EBD032C3BDA0A00D3209E /* InputField.swift */,
+			);
+			path = InputField;
+			sourceTree = "<group>";
+		};
 		47D13A7D2C3A932E0062A4B3 = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +291,7 @@
 				47D13AD82C3AA1B30062A4B3 /* Double+Additions.swift */,
 				47D13AD92C3AA1B30062A4B3 /* Date+Additions.swift */,
 				47D13ADA2C3AA1B30062A4B3 /* View+Additions.swift */,
+				477EBD092C3C1BDE00D3209E /* String+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -298,6 +333,7 @@
 		47D13AE92C3AA4CF0062A4B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				477EBD022C3BD9DF00D3209E /* InputField */,
 				47D13AF02C3ABCF90062A4B3 /* DashedBorder */,
 				47D13AED2C3AA7090062A4B3 /* NextButton */,
 				47D13AEA2C3AA4E70062A4B3 /* WebView */,
@@ -350,8 +386,8 @@
 		47D13AFC2C3AC59B0062A4B3 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
-				47D13AFD2C3AC5C70062A4B3 /* ProjectsContentView.swift */,
-				47D13AFF2C3AC5E30062A4B3 /* ProjectsContentViewModel.swift */,
+				477EBCFC2C3BCC6600D3209E /* ProjectsList */,
+				477EBCFD2C3BCC7900D3209E /* AddProject */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -462,6 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				477EBD012C3BCCA000D3209E /* AddProjectViewModel.swift in Sources */,
 				47D13AC02C3A972F0062A4B3 /* Colors.generated.swift in Sources */,
 				47D13B002C3AC5E30062A4B3 /* ProjectsContentViewModel.swift in Sources */,
 				47D13ADB2C3AA1B30062A4B3 /* Double+Additions.swift in Sources */,
@@ -469,11 +506,13 @@
 				47D13A8E2C3A932E0062A4B3 /* RootViewController.swift in Sources */,
 				47D13AE72C3AA4320062A4B3 /* OnboardingViewTabView.swift in Sources */,
 				47D13A8A2C3A932E0062A4B3 /* AppDelegate.swift in Sources */,
+				477EBD042C3BDA0A00D3209E /* InputField.swift in Sources */,
 				47D13ADC2C3AA1B30062A4B3 /* Date+Additions.swift in Sources */,
 				47D13AA22C3A94A90062A4B3 /* RootContentView.swift in Sources */,
 				47D13AA42C3A94B20062A4B3 /* RootContentViewModel.swift in Sources */,
 				47D13AD32C3A9C830062A4B3 /* DefaultsService.swift in Sources */,
 				47D13AE62C3AA4320062A4B3 /* OnboardingViewModel.swift in Sources */,
+				477EBCFF2C3BCC9600D3209E /* AddProjectView.swift in Sources */,
 				47D13AEF2C3AA7090062A4B3 /* NextButton.swift in Sources */,
 				47D13AF92C3ABE340062A4B3 /* TabBarCustomView.swift in Sources */,
 				47D13ACB2C3A972F0062A4B3 /* Strings.generated.swift in Sources */,
@@ -485,6 +524,7 @@
 				47D13AE52C3AA4320062A4B3 /* OnboardingView.swift in Sources */,
 				47D13AF22C3ABD010062A4B3 /* DashedBorder.swift in Sources */,
 				47D13AC62C3A972F0062A4B3 /* Fonts.generated.swift in Sources */,
+				477EBD0A2C3C1BDE00D3209E /* String+Additions.swift in Sources */,
 				47D13AF82C3ABE340062A4B3 /* TabBar.swift in Sources */,
 				47D13ACF2C3A9C110062A4B3 /* PreloaderView.swift in Sources */,
 				47D13AEC2C3AA4E70062A4B3 /* SwiftUIViewWebView.swift in Sources */,

@@ -11,5 +11,13 @@ extension ProjectsContentView {
     final class ProjectsContentViewModel: ObservableObject {
         @Published var showSearchButton = true
         @Published var searchText = ""
+        @Published var showAddProject = false
+        @Published var projects: [AddProjectView.ProjectModel] = []
+        
+        func getProjects() {
+            DispatchQueue.main.async { [weak self] in
+                self?.projects = DefaultsService.projects
+            }
+        }
     }
 }
