@@ -13,10 +13,25 @@ extension ProjectsContentView {
         @Published var searchText = ""
         @Published var showAddProject = false
         @Published var projects: [AddProjectView.ProjectModel] = []
+        @Published var showSuccess = false
         
         func getProjects() {
             DispatchQueue.main.async { [weak self] in
                 self?.projects = DefaultsService.projects
+            }
+        }
+        
+        func delete(product: AddProjectView.ProjectModel) {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                var projects = DefaultsService.projects
+                if let index = projects.firstIndex(where: {
+                    $0.id == product.id
+                }) {
+                    projects.remove(at: index)
+                    DefaultsService.projects = projects
+                    self.getProjects()
+                }
             }
         }
         

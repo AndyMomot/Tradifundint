@@ -41,12 +41,22 @@ struct InputField: View {
                             .font(Fonts.SFProDisplay.lightItalic.swiftUIFont(size: 16))
                             .padding(.vertical, 28)
                             .padding(.horizontal, 12)
+                            .onTapGesture {
+                                withAnimation {
+                                    showCalendarPicker.toggle()
+                                }
+                            }
                     } else {
                         Text(text)
                             .foregroundStyle(Colors.blackCustom.swiftUIColor)
                             .font(Fonts.SFProDisplay.medium.swiftUIFont(size: 16))
                             .padding(.vertical, 28)
                             .padding(.horizontal, 12)
+                            .onTapGesture {
+                                withAnimation {
+                                    showCalendarPicker.toggle()
+                                }
+                            }
                     }
                     
                     Spacer()

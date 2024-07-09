@@ -33,6 +33,7 @@ internal enum Asset {
   internal static let pancil = ImageAsset(name: "pancil")
   internal static let product = ImageAsset(name: "product")
   internal static let service = ImageAsset(name: "service")
+  internal static let success = ImageAsset(name: "success")
   internal static let time = ImageAsset(name: "time")
   internal static let projectsTab = ImageAsset(name: "projectsTab")
   internal static let roiTab = ImageAsset(name: "roiTab")

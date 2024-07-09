@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProjectCell: View {
     var model: AddProjectView.ProjectModel
+    var onDelete: () -> Void
     
     var body: some View {
         ZStack {
@@ -45,6 +46,23 @@ struct ProjectCell: View {
                             value: "+ " + model.projectedIncome.string())
                     
                     Spacer()
+                    
+                    Button {
+                        onDelete()
+                    } label: {
+                        HStack(spacing: 20) {
+                            Image(systemName: "trash")
+                                .resizable()
+                                .scaledToFit()
+                                .tint(Colors.redCustom.swiftUIColor)
+                                .frame(width: 20, height: 20)
+                            
+                            Text("Удалить")
+                                .foregroundStyle(Colors.redCustom.swiftUIColor)
+                                .font(Fonts.SFProDisplay.bold.swiftUIFont(size: 12))
+                        }
+                    }
+
                 }
                 .padding()
             }
@@ -63,7 +81,7 @@ struct ProjectCell: View {
                                     value: 1),
         projectedIncome: 1100,
         projectType: .service)
-    )
+    ) {}
     .frame(width: 361, height: 228)
 }
 

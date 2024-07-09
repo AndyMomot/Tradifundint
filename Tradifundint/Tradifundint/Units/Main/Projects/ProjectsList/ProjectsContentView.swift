@@ -99,7 +99,11 @@ struct ProjectsContentView: View {
                         VStack(spacing: 30) {
                             ForEach(viewModel.projects) { product in
                                 NavigationLink(value: product) {
-                                    ProjectCell(model: product)
+                                    ProjectCell(model: product) { // on delete
+                                        withAnimation {
+                                            viewModel.delete(product: product)
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -147,7 +151,14 @@ struct ProjectsContentView: View {
             .navigationDestination(isPresented: $viewModel.showAddProject) {
                 AddProjectView() { // on Add
                     viewModel.getProjects()
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        viewModel.showSuccess.toggle()
+                    }
                 }
+            }
+            .navigationDestination(isPresented: $viewModel.showSuccess) {
+                DidCreateProjectView()
             }
             .navigationDestination(for: AddProjectView.ProjectModel.self) { model in
                 EditProjectView(model: model) {
