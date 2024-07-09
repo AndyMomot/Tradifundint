@@ -96,7 +96,7 @@ struct ProjectsContentView: View {
                     
                     // Projects
                     ScrollView(showsIndicators: false) {
-                        VStack(spacing: 20) {
+                        VStack(spacing: 30) {
                             ForEach(viewModel.projects) { product in
                                 NavigationLink(value: product) {
                                     ProjectCell(model: product)
@@ -150,7 +150,9 @@ struct ProjectsContentView: View {
                 }
             }
             .navigationDestination(for: AddProjectView.ProjectModel.self) { model in
-                Text(model.name)
+                EditProjectView(model: model) {
+                    viewModel.getProjects()
+                }
             }
         }
         .onAppear {
