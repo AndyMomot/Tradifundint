@@ -94,6 +94,23 @@ struct AddProjectView: View {
                                   ])
                     .padding(.leading)
                     
+                    VStack(spacing: 10) {
+                        Toggle(isOn: $viewModel.isService) {
+                            Text("Сервис")
+                                .foregroundStyle(Colors.firuza.swiftUIColor)
+                                .font(Fonts.SFProDisplay.medium.swiftUIFont(size: 16))
+                        }
+                        .tint(Colors.firuza.swiftUIColor)
+                        
+                        Toggle(isOn: $viewModel.isProduct) {
+                            Text("Товар")
+                                .foregroundStyle(Colors.firuza.swiftUIColor)
+                                .font(Fonts.SFProDisplay.medium.swiftUIFont(size: 16))
+                        }
+                        .tint(Colors.firuza.swiftUIColor)
+                    }
+                    .padding(.horizontal)
+                    
                     NextButton(title: "Добавить") {
                         viewModel.addProject {
                             dismiss.callAsFunction()
@@ -112,6 +129,12 @@ struct AddProjectView: View {
             
         }
         .navigationBarBackButtonHidden()
+        .onChange(of: viewModel.isProduct) { value in
+            viewModel.isService = !value
+        }
+        .onChange(of: viewModel.isService) { value in
+            viewModel.isProduct = !value
+        }
     }
 }
 

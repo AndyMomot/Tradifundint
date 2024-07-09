@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		473098742C3D607400AA428E /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473098732C3D607400AA428E /* ProjectCell.swift */; };
 		477EBCFF2C3BCC9600D3209E /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477EBCFE2C3BCC9600D3209E /* AddProjectView.swift */; };
 		477EBD012C3BCCA000D3209E /* AddProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477EBD002C3BCCA000D3209E /* AddProjectViewModel.swift */; };
 		477EBD042C3BDA0A00D3209E /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477EBD032C3BDA0A00D3209E /* InputField.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		473098732C3D607400AA428E /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		477EBCFE2C3BCC9600D3209E /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
 		477EBD002C3BCCA000D3209E /* AddProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewModel.swift; sourceTree = "<group>"; };
 		477EBD032C3BDA0A00D3209E /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
@@ -115,9 +117,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		473098722C3D605800AA428E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				473098732C3D607400AA428E /* ProjectCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		477EBCFC2C3BCC6600D3209E /* ProjectsList */ = {
 			isa = PBXGroup;
 			children = (
+				473098722C3D605800AA428E /* Cells */,
 				47D13AFD2C3AC5C70062A4B3 /* ProjectsContentView.swift */,
 				47D13AFF2C3AC5E30062A4B3 /* ProjectsContentViewModel.swift */,
 			);
@@ -518,6 +529,7 @@
 				47D13ACB2C3A972F0062A4B3 /* Strings.generated.swift in Sources */,
 				47D13A8C2C3A932E0062A4B3 /* SceneDelegate.swift in Sources */,
 				47D13ADD2C3AA1B30062A4B3 /* View+Additions.swift in Sources */,
+				473098742C3D607400AA428E /* ProjectCell.swift in Sources */,
 				47D13AFE2C3AC5C70062A4B3 /* ProjectsContentView.swift in Sources */,
 				47D13AFA2C3ABE340062A4B3 /* TabBarViewModel.swift in Sources */,
 				47D13AD52C3A9EF90062A4B3 /* PreloaderViewModel.swift in Sources */,

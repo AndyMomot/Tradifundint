@@ -61,7 +61,8 @@ struct ProjectsContentView: View {
                                                     .foregroundStyle(Colors.grayLite.swiftUIColor)
                                                     .font(Fonts.SFProDisplay.regular.swiftUIFont(size: 10))
                                             }
-                                            
+                                            .foregroundStyle(.white)
+                                            .font(Fonts.SFProDisplay.regular.swiftUIFont(size: 10))
                                         }
                                         .padding(.horizontal, 10)
                                         .padding(.vertical, 5)
@@ -71,6 +72,7 @@ struct ProjectsContentView: View {
                                         
                                         Button {
                                             withAnimation {
+                                                viewModel.searchText = ""
                                                 viewModel.showSearchButton.toggle()
                                             }
                                         } label: {
@@ -93,16 +95,15 @@ struct ProjectsContentView: View {
                         .offset(x: 3, y: -3)
                     
                     // Projects
-                    let range = Array(0..<viewModel.projects.count)
                     ScrollView(showsIndicators: false) {
-                        VStack {
-                            ForEach(range, id: \.self) { _ in
-                                Rectangle()
-                                    .foregroundStyle(Colors.firuza.swiftUIColor)
-                                    .cornerRadius(20, corners: .allCorners)
-                                    .frame(height: 228)
+                        VStack(spacing: 20) {
+                            ForEach(viewModel.projects) { product in
+                                NavigationLink(value: product) {
+                                    ProjectCell(model: product)
+                                }
                             }
                         }
+                        .padding()
                     }
                     .overlay {
                         VStack {
@@ -117,7 +118,7 @@ struct ProjectsContentView: View {
                                     }
                                 } label: {
                                     RoundedRectangle(cornerRadius: 10)
-                                        .foregroundStyle(Colors.blueMidnight.swiftUIColor)
+                                        .foregroundStyle(.clear)
                                         .frame(width: 50, height: 50)
                                         .overlay {
                                             DashedBorder(color: .white, cornerRadius: 10)
@@ -148,9 +149,15 @@ struct ProjectsContentView: View {
                     viewModel.getProjects()
                 }
             }
+            .navigationDestination(for: AddProjectView.ProjectModel.self) { model in
+                Text(model.name)
+            }
         }
         .onAppear {
             viewModel.getProjects()
+        }
+        .onChange(of: viewModel.searchText) { value in
+            viewModel.search(containing: value)
         }
     }
 }

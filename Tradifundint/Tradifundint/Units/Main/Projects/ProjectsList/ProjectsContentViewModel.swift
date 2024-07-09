@@ -19,5 +19,20 @@ extension ProjectsContentView {
                 self?.projects = DefaultsService.projects
             }
         }
+        
+        func search(containing character: String)  {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                let projectItems = DefaultsService.projects
+                
+                if character.isEmpty {
+                    self.projects = projectItems
+                } else {
+                    self.projects = projectItems.filter {
+                        $0.name.localizedCaseInsensitiveContains(character)
+                    }
+                }
+            }
+        }
     }
 }
