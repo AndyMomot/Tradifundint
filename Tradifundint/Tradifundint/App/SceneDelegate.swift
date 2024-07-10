@@ -18,6 +18,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.rootViewController = RootViewController()
         window.makeKeyAndVisible()
         window.overrideUserInterfaceStyle = .light
+        setBatterySavingMode(isOn: DefaultsService.batterySaving)
         self.window = window
     }
 
@@ -48,7 +49,11 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
 
+private extension SceneDelegate {
+    func setBatterySavingMode(isOn: Bool) {
+        UIScreen.main.brightness = isOn ? 0.5 : 1
+        UIScreen.main.wantsSoftwareDimming = isOn ? true : false
+    }
+}

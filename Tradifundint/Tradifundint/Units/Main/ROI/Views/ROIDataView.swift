@@ -49,7 +49,7 @@ struct ROIDataView: View {
                         
                         Spacer()
                     }
-                    .frame(width: bounds.width * 0.4)
+                    .frame(width: bounds.width * 0.35)
                     
                     Spacer()
                 }

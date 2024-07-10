@@ -48,12 +48,14 @@ struct ROIView: View {
                             ROIDataView(title: "Доход с проекта", value: viewModel.totalIncome.string())
                             ROIDataView(title: "Затраты на проект", value: viewModel.totalCost.string())
                         }
+                        .padding(.horizontal)
                         
                         VStack(spacing: 10) {
                             NextButton(title: "Рассчитать") {
                                 viewModel.showCalculating.toggle()
                                 viewModel.calculateROI()
                             }
+                            .padding(.horizontal)
                             
                             Asset.roi.swiftUIImage
                                 .resizable()
@@ -65,7 +67,7 @@ struct ROIView: View {
             }
             .navigationDestination(isPresented: $viewModel.showCalculating) {
                 CalculatingView(dismissAfter: 1.5) {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                         viewModel.showROIResult.toggle()
                     }
                 }

@@ -21,7 +21,7 @@ struct TabBar: View {
             Text("Taxes")
                 .tag(TabBarSelectionView.taxes.rawValue)
             
-            Text("Settings")
+            SettingsView()
                 .tag(TabBarSelectionView.settings.rawValue)
         }
         .edgesIgnoringSafeArea(.bottom)

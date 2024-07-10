@@ -58,6 +58,26 @@ extension DefaultsService {
 }
 
 extension DefaultsService {
+    static var isAllowedNotifications: Bool {
+        get {
+            standard.bool(forKey: Keys.notifications.rawValue)
+        }
+        set {
+            standard.setValue(newValue, forKey: Keys.notifications.rawValue)
+        }
+    }
+    
+    static var batterySaving: Bool {
+        get {
+            standard.bool(forKey: Keys.battery.rawValue)
+        }
+        set {
+            standard.setValue(newValue, forKey: Keys.battery.rawValue)
+        }
+    }
+}
+
+extension DefaultsService {
     static func removeAll() {
         if let bundleIdentifier = Bundle.main.bundleIdentifier {
             standard.removePersistentDomain(forName: bundleIdentifier)
@@ -70,5 +90,7 @@ extension DefaultsService {
     enum Keys: String {
         case flow
         case projects
+        case notifications
+        case battery
     }
 }

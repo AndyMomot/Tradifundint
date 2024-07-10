@@ -75,6 +75,9 @@ struct ROIResultView: View {
                                 Text(rootViewModel.roiValue.string() + "%")
                                     .foregroundStyle(Colors.firuza.swiftUIColor)
                                     .font(Fonts.SFProDisplay.bold.swiftUIFont(size: 64))
+                                    .lineLimit(1)
+                                    .minimumScaleFactor(0.5)
+                                    .padding(.horizontal)
                             }
                         
                         Asset.roi.swiftUIImage

@@ -16,6 +16,10 @@
 		473098872C3EA3A900AA428E /* ROIDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473098862C3EA3A900AA428E /* ROIDataView.swift */; };
 		4730988A2C3EADB000AA428E /* CalculatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473098892C3EADB000AA428E /* CalculatingView.swift */; };
 		4730988D2C3EB24A00AA428E /* ROIResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4730988C2C3EB24A00AA428E /* ROIResultView.swift */; };
+		473098902C3EBF2200AA428E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4730988F2C3EBF2200AA428E /* SettingsView.swift */; };
+		473098932C3EBF4100AA428E /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473098922C3EBF4100AA428E /* SettingCell.swift */; };
+		473098952C3EC51200AA428E /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473098942C3EC51200AA428E /* SettingsViewModel.swift */; };
+		473098982C3ECA1400AA428E /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473098972C3ECA1400AA428E /* ShareSheet.swift */; };
 		477EBCFF2C3BCC9600D3209E /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477EBCFE2C3BCC9600D3209E /* AddProjectView.swift */; };
 		477EBD012C3BCCA000D3209E /* AddProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477EBD002C3BCCA000D3209E /* AddProjectViewModel.swift */; };
 		477EBD042C3BDA0A00D3209E /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477EBD032C3BDA0A00D3209E /* InputField.swift */; };
@@ -73,6 +77,10 @@
 		473098862C3EA3A900AA428E /* ROIDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROIDataView.swift; sourceTree = "<group>"; };
 		473098892C3EADB000AA428E /* CalculatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatingView.swift; sourceTree = "<group>"; };
 		4730988C2C3EB24A00AA428E /* ROIResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROIResultView.swift; sourceTree = "<group>"; };
+		4730988F2C3EBF2200AA428E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		473098922C3EBF4100AA428E /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		473098942C3EC51200AA428E /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		473098972C3ECA1400AA428E /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		477EBCFE2C3BCC9600D3209E /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
 		477EBD002C3BCCA000D3209E /* AddProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewModel.swift; sourceTree = "<group>"; };
 		477EBD032C3BDA0A00D3209E /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
@@ -183,6 +191,32 @@
 				473098892C3EADB000AA428E /* CalculatingView.swift */,
 			);
 			path = Calculating;
+			sourceTree = "<group>";
+		};
+		4730988E2C3EBF0E00AA428E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				473098912C3EBF3400AA428E /* Views */,
+				4730988F2C3EBF2200AA428E /* SettingsView.swift */,
+				473098942C3EC51200AA428E /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		473098912C3EBF3400AA428E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				473098922C3EBF4100AA428E /* SettingCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		473098962C3ECA0900AA428E /* ShareSheet */ = {
+			isa = PBXGroup;
+			children = (
+				473098972C3ECA1400AA428E /* ShareSheet.swift */,
+			);
+			path = ShareSheet;
 			sourceTree = "<group>";
 		};
 		477EBCFC2C3BCC6600D3209E /* ProjectsList */ = {
@@ -404,6 +438,7 @@
 		47D13AE92C3AA4CF0062A4B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				473098962C3ECA0900AA428E /* ShareSheet */,
 				477EBD022C3BD9DF00D3209E /* InputField */,
 				47D13AF02C3ABCF90062A4B3 /* DashedBorder */,
 				47D13AED2C3AA7090062A4B3 /* NextButton */,
@@ -449,6 +484,7 @@
 		47D13AFB2C3AC5910062A4B3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				4730988E2C3EBF0E00AA428E /* Settings */,
 				473098882C3EAD9D00AA428E /* Calculating */,
 				473098802C3E9CFB00AA428E /* ROI */,
 				47D13AFC2C3AC59B0062A4B3 /* Projects */,
@@ -584,6 +620,7 @@
 				47D13AE72C3AA4320062A4B3 /* OnboardingViewTabView.swift in Sources */,
 				47D13A8A2C3A932E0062A4B3 /* AppDelegate.swift in Sources */,
 				473098772C3D738300AA428E /* EditProjectView.swift in Sources */,
+				473098982C3ECA1400AA428E /* ShareSheet.swift in Sources */,
 				477EBD042C3BDA0A00D3209E /* InputField.swift in Sources */,
 				47D13ADC2C3AA1B30062A4B3 /* Date+Additions.swift in Sources */,
 				47D13AA22C3A94A90062A4B3 /* RootContentView.swift in Sources */,
@@ -598,6 +635,7 @@
 				47D13ACB2C3A972F0062A4B3 /* Strings.generated.swift in Sources */,
 				47D13A8C2C3A932E0062A4B3 /* SceneDelegate.swift in Sources */,
 				47D13ADD2C3AA1B30062A4B3 /* View+Additions.swift in Sources */,
+				473098902C3EBF2200AA428E /* SettingsView.swift in Sources */,
 				473098742C3D607400AA428E /* ProjectCell.swift in Sources */,
 				4730988D2C3EB24A00AA428E /* ROIResultView.swift in Sources */,
 				47D13AFE2C3AC5C70062A4B3 /* ProjectsContentView.swift in Sources */,
@@ -610,8 +648,10 @@
 				477EBD0A2C3C1BDE00D3209E /* String+Additions.swift in Sources */,
 				47D13AF82C3ABE340062A4B3 /* TabBar.swift in Sources */,
 				473098872C3EA3A900AA428E /* ROIDataView.swift in Sources */,
+				473098932C3EBF4100AA428E /* SettingCell.swift in Sources */,
 				47D13ACF2C3A9C110062A4B3 /* PreloaderView.swift in Sources */,
 				47D13AEC2C3AA4E70062A4B3 /* SwiftUIViewWebView.swift in Sources */,
+				473098952C3EC51200AA428E /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
