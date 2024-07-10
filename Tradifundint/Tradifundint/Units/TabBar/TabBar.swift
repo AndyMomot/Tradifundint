@@ -12,7 +12,7 @@ struct TabBar: View {
     
     var body: some View {
         TabView(selection: $viewModel.selection) {
-            Text("ROI")
+            ROIView()
                 .tag(TabBarSelectionView.roi.rawValue)
             
             ProjectsContentView()

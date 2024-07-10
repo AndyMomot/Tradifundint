@@ -11,6 +11,11 @@
 		473098772C3D738300AA428E /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473098762C3D738300AA428E /* EditProjectView.swift */; };
 		473098792C3D738E00AA428E /* EditProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473098782C3D738E00AA428E /* EditProjectViewModel.swift */; };
 		4730987C2C3DAB1700AA428E /* DidCreateProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4730987B2C3DAB1700AA428E /* DidCreateProjectView.swift */; };
+		473098822C3E9D9E00AA428E /* ROIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473098812C3E9D9E00AA428E /* ROIView.swift */; };
+		473098842C3E9DA800AA428E /* ROIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473098832C3E9DA800AA428E /* ROIViewModel.swift */; };
+		473098872C3EA3A900AA428E /* ROIDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473098862C3EA3A900AA428E /* ROIDataView.swift */; };
+		4730988A2C3EADB000AA428E /* CalculatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473098892C3EADB000AA428E /* CalculatingView.swift */; };
+		4730988D2C3EB24A00AA428E /* ROIResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4730988C2C3EB24A00AA428E /* ROIResultView.swift */; };
 		477EBCFF2C3BCC9600D3209E /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477EBCFE2C3BCC9600D3209E /* AddProjectView.swift */; };
 		477EBD012C3BCCA000D3209E /* AddProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477EBD002C3BCCA000D3209E /* AddProjectViewModel.swift */; };
 		477EBD042C3BDA0A00D3209E /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477EBD032C3BDA0A00D3209E /* InputField.swift */; };
@@ -63,6 +68,11 @@
 		473098762C3D738300AA428E /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		473098782C3D738E00AA428E /* EditProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectViewModel.swift; sourceTree = "<group>"; };
 		4730987B2C3DAB1700AA428E /* DidCreateProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidCreateProjectView.swift; sourceTree = "<group>"; };
+		473098812C3E9D9E00AA428E /* ROIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROIView.swift; sourceTree = "<group>"; };
+		473098832C3E9DA800AA428E /* ROIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROIViewModel.swift; sourceTree = "<group>"; };
+		473098862C3EA3A900AA428E /* ROIDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROIDataView.swift; sourceTree = "<group>"; };
+		473098892C3EADB000AA428E /* CalculatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatingView.swift; sourceTree = "<group>"; };
+		4730988C2C3EB24A00AA428E /* ROIResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROIResultView.swift; sourceTree = "<group>"; };
 		477EBCFE2C3BCC9600D3209E /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
 		477EBD002C3BCCA000D3209E /* AddProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewModel.swift; sourceTree = "<group>"; };
 		477EBD032C3BDA0A00D3209E /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
@@ -146,6 +156,33 @@
 				4730987B2C3DAB1700AA428E /* DidCreateProjectView.swift */,
 			);
 			path = DidCreateProject;
+			sourceTree = "<group>";
+		};
+		473098802C3E9CFB00AA428E /* ROI */ = {
+			isa = PBXGroup;
+			children = (
+				473098852C3EA38D00AA428E /* Views */,
+				473098812C3E9D9E00AA428E /* ROIView.swift */,
+				4730988C2C3EB24A00AA428E /* ROIResultView.swift */,
+				473098832C3E9DA800AA428E /* ROIViewModel.swift */,
+			);
+			path = ROI;
+			sourceTree = "<group>";
+		};
+		473098852C3EA38D00AA428E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				473098862C3EA3A900AA428E /* ROIDataView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		473098882C3EAD9D00AA428E /* Calculating */ = {
+			isa = PBXGroup;
+			children = (
+				473098892C3EADB000AA428E /* CalculatingView.swift */,
+			);
+			path = Calculating;
 			sourceTree = "<group>";
 		};
 		477EBCFC2C3BCC6600D3209E /* ProjectsList */ = {
@@ -412,6 +449,8 @@
 		47D13AFB2C3AC5910062A4B3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				473098882C3EAD9D00AA428E /* Calculating */,
+				473098802C3E9CFB00AA428E /* ROI */,
 				47D13AFC2C3AC59B0062A4B3 /* Projects */,
 			);
 			path = Main;
@@ -534,6 +573,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4730988A2C3EADB000AA428E /* CalculatingView.swift in Sources */,
 				477EBD012C3BCCA000D3209E /* AddProjectViewModel.swift in Sources */,
 				47D13AC02C3A972F0062A4B3 /* Colors.generated.swift in Sources */,
 				47D13B002C3AC5E30062A4B3 /* ProjectsContentViewModel.swift in Sources */,
@@ -550,13 +590,16 @@
 				47D13AA42C3A94B20062A4B3 /* RootContentViewModel.swift in Sources */,
 				47D13AD32C3A9C830062A4B3 /* DefaultsService.swift in Sources */,
 				47D13AE62C3AA4320062A4B3 /* OnboardingViewModel.swift in Sources */,
+				473098822C3E9D9E00AA428E /* ROIView.swift in Sources */,
 				477EBCFF2C3BCC9600D3209E /* AddProjectView.swift in Sources */,
 				47D13AEF2C3AA7090062A4B3 /* NextButton.swift in Sources */,
+				473098842C3E9DA800AA428E /* ROIViewModel.swift in Sources */,
 				47D13AF92C3ABE340062A4B3 /* TabBarCustomView.swift in Sources */,
 				47D13ACB2C3A972F0062A4B3 /* Strings.generated.swift in Sources */,
 				47D13A8C2C3A932E0062A4B3 /* SceneDelegate.swift in Sources */,
 				47D13ADD2C3AA1B30062A4B3 /* View+Additions.swift in Sources */,
 				473098742C3D607400AA428E /* ProjectCell.swift in Sources */,
+				4730988D2C3EB24A00AA428E /* ROIResultView.swift in Sources */,
 				47D13AFE2C3AC5C70062A4B3 /* ProjectsContentView.swift in Sources */,
 				47D13AFA2C3ABE340062A4B3 /* TabBarViewModel.swift in Sources */,
 				47D13AD52C3A9EF90062A4B3 /* PreloaderViewModel.swift in Sources */,
@@ -566,6 +609,7 @@
 				47D13AC62C3A972F0062A4B3 /* Fonts.generated.swift in Sources */,
 				477EBD0A2C3C1BDE00D3209E /* String+Additions.swift in Sources */,
 				47D13AF82C3ABE340062A4B3 /* TabBar.swift in Sources */,
+				473098872C3EA3A900AA428E /* ROIDataView.swift in Sources */,
 				47D13ACF2C3A9C110062A4B3 /* PreloaderView.swift in Sources */,
 				47D13AEC2C3AA4E70062A4B3 /* SwiftUIViewWebView.swift in Sources */,
 			);
