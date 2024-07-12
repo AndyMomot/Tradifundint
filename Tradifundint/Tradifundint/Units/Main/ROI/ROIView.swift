@@ -11,8 +11,6 @@ struct ROIView: View {
     
     @StateObject private var viewModel = ROIViewModel()
     
-    @State var color: Color = .red
-    
     private var bounds: CGRect {
         UIScreen.main.bounds
     }

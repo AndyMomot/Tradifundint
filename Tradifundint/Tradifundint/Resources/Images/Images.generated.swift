@@ -42,6 +42,7 @@ internal enum Asset {
   internal static let roiTab = ImageAsset(name: "roiTab")
   internal static let settingsTab = ImageAsset(name: "settingsTab")
   internal static let taxesTab = ImageAsset(name: "taxesTab")
+  internal static let taxes = ImageAsset(name: "taxes")
   internal static let launch = ImageAsset(name: "launch")
   internal static let logo = ImageAsset(name: "logo")
 }

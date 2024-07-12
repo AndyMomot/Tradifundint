@@ -59,7 +59,7 @@ struct SettingCell: View {
 
 extension SettingCell {
     enum CellType {
-        case notifications
+        case notifications(isOn: Bool)
         case rateUs
         case saveEnergy
         case share
@@ -79,8 +79,8 @@ extension SettingCell {
         
         var actionType: ActionType {
             switch self {
-            case .notifications:
-                return .toggle(DefaultsService.isAllowedNotifications)
+            case .notifications(let isOn):
+                return .toggle(isOn)
             case .saveEnergy:
                 return .toggle(DefaultsService.batterySaving)
             case .rateUs, .share:

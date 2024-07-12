@@ -41,10 +41,13 @@ struct SettingsView: View {
                         .offset(x: 3, y: -6)
                     
                     VStack(spacing: 18) {
-                        SettingCell(cellType: .notifications) { action in
+                        SettingCell(cellType: .notifications(isOn: viewModel.isAllowedNotifications)) { action in
                             switch action {
                             case .toggle(let isOn):
                                 DefaultsService.isAllowedNotifications = isOn
+                                if isOn {
+                                    viewModel.openSettings()
+                                }
                             case .link:
                                 break
                             }
@@ -87,6 +90,9 @@ struct SettingsView: View {
             .ignoresSafeArea(edges: .top)
             .sheet(isPresented: $viewModel.isShareSheetPresented) {
                 ShareSheet(items: [viewModel.appLink])
+            }
+            .onAppear {
+                viewModel.checkNotificationPermission()
             }
         }
     }

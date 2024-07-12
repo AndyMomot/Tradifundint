@@ -18,7 +18,7 @@ struct TabBar: View {
             ProjectsContentView()
                 .tag(TabBarSelectionView.projects.rawValue)
             
-            Text("Taxes")
+            TaxCalculationView()
                 .tag(TabBarSelectionView.taxes.rawValue)
             
             SettingsView()

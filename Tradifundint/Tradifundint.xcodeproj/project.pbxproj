@@ -20,6 +20,12 @@
 		473098932C3EBF4100AA428E /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473098922C3EBF4100AA428E /* SettingCell.swift */; };
 		473098952C3EC51200AA428E /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473098942C3EC51200AA428E /* SettingsViewModel.swift */; };
 		473098982C3ECA1400AA428E /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473098972C3ECA1400AA428E /* ShareSheet.swift */; };
+		474454332C4112E3009F51A0 /* TaxCalculationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474454322C4112E3009F51A0 /* TaxCalculationView.swift */; };
+		474454352C4112EA009F51A0 /* TaxCalculationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474454342C4112EA009F51A0 /* TaxCalculationViewModel.swift */; };
+		474454392C411952009F51A0 /* TaxesInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474454382C411952009F51A0 /* TaxesInputField.swift */; };
+		4744543C2C411BEE009F51A0 /* PlannedYearIndicatorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4744543B2C411BEE009F51A0 /* PlannedYearIndicatorsView.swift */; };
+		474454412C4122EB009F51A0 /* NotStandardTaxRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474454402C4122EB009F51A0 /* NotStandardTaxRateView.swift */; };
+		474454442C4123D6009F51A0 /* TaxesResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474454432C4123D6009F51A0 /* TaxesResultView.swift */; };
 		477EBCFF2C3BCC9600D3209E /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477EBCFE2C3BCC9600D3209E /* AddProjectView.swift */; };
 		477EBD012C3BCCA000D3209E /* AddProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477EBD002C3BCCA000D3209E /* AddProjectViewModel.swift */; };
 		477EBD042C3BDA0A00D3209E /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477EBD032C3BDA0A00D3209E /* InputField.swift */; };
@@ -81,6 +87,13 @@
 		473098922C3EBF4100AA428E /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		473098942C3EC51200AA428E /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		473098972C3ECA1400AA428E /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		474454322C4112E3009F51A0 /* TaxCalculationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxCalculationView.swift; sourceTree = "<group>"; };
+		474454342C4112EA009F51A0 /* TaxCalculationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxCalculationViewModel.swift; sourceTree = "<group>"; };
+		474454382C411952009F51A0 /* TaxesInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesInputField.swift; sourceTree = "<group>"; };
+		4744543B2C411BEE009F51A0 /* PlannedYearIndicatorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannedYearIndicatorsView.swift; sourceTree = "<group>"; };
+		474454402C4122EB009F51A0 /* NotStandardTaxRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotStandardTaxRateView.swift; sourceTree = "<group>"; };
+		474454432C4123D6009F51A0 /* TaxesResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesResultView.swift; sourceTree = "<group>"; };
+		475E8FF12C40003400DA6148 /* Tradifundint.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tradifundint.entitlements; sourceTree = "<group>"; };
 		477EBCFE2C3BCC9600D3209E /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
 		477EBD002C3BCCA000D3209E /* AddProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewModel.swift; sourceTree = "<group>"; };
 		477EBD032C3BDA0A00D3209E /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
@@ -219,6 +232,66 @@
 			path = ShareSheet;
 			sourceTree = "<group>";
 		};
+		474454302C41128D009F51A0 /* Taxes */ = {
+			isa = PBXGroup;
+			children = (
+				474454312C4112D5009F51A0 /* TaxCalculation */,
+				4744543A2C411BC3009F51A0 /* PlannedYearIndicators */,
+				4744543F2C4122B0009F51A0 /* NotStandardTaxRate */,
+				474454422C4123C1009F51A0 /* TaxesResult */,
+			);
+			path = Taxes;
+			sourceTree = "<group>";
+		};
+		474454312C4112D5009F51A0 /* TaxCalculation */ = {
+			isa = PBXGroup;
+			children = (
+				474454362C41192D009F51A0 /* Views */,
+				474454322C4112E3009F51A0 /* TaxCalculationView.swift */,
+				474454342C4112EA009F51A0 /* TaxCalculationViewModel.swift */,
+			);
+			path = TaxCalculation;
+			sourceTree = "<group>";
+		};
+		474454362C41192D009F51A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		474454372C411946009F51A0 /* TaxesInputField */ = {
+			isa = PBXGroup;
+			children = (
+				474454382C411952009F51A0 /* TaxesInputField.swift */,
+			);
+			path = TaxesInputField;
+			sourceTree = "<group>";
+		};
+		4744543A2C411BC3009F51A0 /* PlannedYearIndicators */ = {
+			isa = PBXGroup;
+			children = (
+				4744543B2C411BEE009F51A0 /* PlannedYearIndicatorsView.swift */,
+			);
+			path = PlannedYearIndicators;
+			sourceTree = "<group>";
+		};
+		4744543F2C4122B0009F51A0 /* NotStandardTaxRate */ = {
+			isa = PBXGroup;
+			children = (
+				474454402C4122EB009F51A0 /* NotStandardTaxRateView.swift */,
+			);
+			path = NotStandardTaxRate;
+			sourceTree = "<group>";
+		};
+		474454422C4123C1009F51A0 /* TaxesResult */ = {
+			isa = PBXGroup;
+			children = (
+				474454432C4123D6009F51A0 /* TaxesResultView.swift */,
+			);
+			path = TaxesResult;
+			sourceTree = "<group>";
+		};
 		477EBCFC2C3BCC6600D3209E /* ProjectsList */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +339,7 @@
 		47D13A882C3A932E0062A4B3 /* Tradifundint */ = {
 			isa = PBXGroup;
 			children = (
+				475E8FF12C40003400DA6148 /* Tradifundint.entitlements */,
 				47D13AE82C3AA4C00062A4B3 /* Helpers */,
 				47D13AD72C3AA1B30062A4B3 /* Extensions */,
 				47D13A9D2C3A93E10062A4B3 /* App */,
@@ -438,11 +512,13 @@
 		47D13AE92C3AA4CF0062A4B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				474454372C411946009F51A0 /* TaxesInputField */,
 				473098962C3ECA0900AA428E /* ShareSheet */,
 				477EBD022C3BD9DF00D3209E /* InputField */,
 				47D13AF02C3ABCF90062A4B3 /* DashedBorder */,
 				47D13AED2C3AA7090062A4B3 /* NextButton */,
 				47D13AEA2C3AA4E70062A4B3 /* WebView */,
+				473098882C3EAD9D00AA428E /* Calculating */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -484,10 +560,10 @@
 		47D13AFB2C3AC5910062A4B3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				4730988E2C3EBF0E00AA428E /* Settings */,
-				473098882C3EAD9D00AA428E /* Calculating */,
 				473098802C3E9CFB00AA428E /* ROI */,
 				47D13AFC2C3AC59B0062A4B3 /* Projects */,
+				474454302C41128D009F51A0 /* Taxes */,
+				4730988E2C3EBF0E00AA428E /* Settings */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -611,11 +687,14 @@
 			files = (
 				4730988A2C3EADB000AA428E /* CalculatingView.swift in Sources */,
 				477EBD012C3BCCA000D3209E /* AddProjectViewModel.swift in Sources */,
+				474454442C4123D6009F51A0 /* TaxesResultView.swift in Sources */,
 				47D13AC02C3A972F0062A4B3 /* Colors.generated.swift in Sources */,
 				47D13B002C3AC5E30062A4B3 /* ProjectsContentViewModel.swift in Sources */,
 				47D13ADB2C3AA1B30062A4B3 /* Double+Additions.swift in Sources */,
 				47D13ABE2C3A972F0062A4B3 /* Images.generated.swift in Sources */,
+				474454332C4112E3009F51A0 /* TaxCalculationView.swift in Sources */,
 				473098792C3D738E00AA428E /* EditProjectViewModel.swift in Sources */,
+				474454352C4112EA009F51A0 /* TaxCalculationViewModel.swift in Sources */,
 				47D13A8E2C3A932E0062A4B3 /* RootViewController.swift in Sources */,
 				47D13AE72C3AA4320062A4B3 /* OnboardingViewTabView.swift in Sources */,
 				47D13A8A2C3A932E0062A4B3 /* AppDelegate.swift in Sources */,
@@ -636,11 +715,13 @@
 				47D13A8C2C3A932E0062A4B3 /* SceneDelegate.swift in Sources */,
 				47D13ADD2C3AA1B30062A4B3 /* View+Additions.swift in Sources */,
 				473098902C3EBF2200AA428E /* SettingsView.swift in Sources */,
+				474454392C411952009F51A0 /* TaxesInputField.swift in Sources */,
 				473098742C3D607400AA428E /* ProjectCell.swift in Sources */,
 				4730988D2C3EB24A00AA428E /* ROIResultView.swift in Sources */,
 				47D13AFE2C3AC5C70062A4B3 /* ProjectsContentView.swift in Sources */,
 				47D13AFA2C3ABE340062A4B3 /* TabBarViewModel.swift in Sources */,
 				47D13AD52C3A9EF90062A4B3 /* PreloaderViewModel.swift in Sources */,
+				4744543C2C411BEE009F51A0 /* PlannedYearIndicatorsView.swift in Sources */,
 				4730987C2C3DAB1700AA428E /* DidCreateProjectView.swift in Sources */,
 				47D13AE52C3AA4320062A4B3 /* OnboardingView.swift in Sources */,
 				47D13AF22C3ABD010062A4B3 /* DashedBorder.swift in Sources */,
@@ -650,6 +731,7 @@
 				473098872C3EA3A900AA428E /* ROIDataView.swift in Sources */,
 				473098932C3EBF4100AA428E /* SettingCell.swift in Sources */,
 				47D13ACF2C3A9C110062A4B3 /* PreloaderView.swift in Sources */,
+				474454412C4122EB009F51A0 /* NotStandardTaxRateView.swift in Sources */,
 				47D13AEC2C3AA4E70062A4B3 /* SwiftUIViewWebView.swift in Sources */,
 				473098952C3EC51200AA428E /* SettingsViewModel.swift in Sources */,
 			);
@@ -793,6 +875,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Tradifundint/Tradifundint.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AQV6DH83XK;
@@ -825,6 +908,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Tradifundint/Tradifundint.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AQV6DH83XK;

@@ -27,6 +27,10 @@ extension ROIView {
         func calculateROI() {
             // Формула ROI:
             // (Доход с проекта — Затраты на проект) ÷ Затраты на проект × 100%
+            guard totalIncome > .zero && totalCost > .zero else {
+                roiValue = .zero
+                return
+            }
             roiValue = (totalIncome - totalCost) / totalCost * 100
         }
     }
