@@ -9,7 +9,7 @@ import Foundation
 
 extension TaxCalculationView {
     final class TaxCalculationViewModel: ObservableObject {
-        
+    
         // MARK: - Company information
         @Published var isLLC = false // OOO
         @Published var isIE = false // ИП
@@ -18,6 +18,8 @@ extension TaxCalculationView {
         @Published var employeesNumber = ""
         
         @Published var showPlannedYearIndicatorsView = false
+        
+        private(set) lazy var baseTaxRate = isLLC ? 18.0 : 10.0 // %
         
         var isValidCompanyInfoData: Bool {
             guard isLLC || isIE,
@@ -77,8 +79,39 @@ extension TaxCalculationView {
         @Published var resultIncomeMinusCost = 0.0
         @Published var resultGTS = 0.0 // ОСНО
         
-        func calculateResult() {
+        func calculateStandartTaxes() {
+            let income = Double(income) ?? .zero
+            let costs = Double(cost) ?? .zero
+            let taxCoefficient = baseTaxRate / 100
             
+            // 1. УСН (доходы)
+            // Налог = Доход × Ставка налога
+            resultIncome = income * taxCoefficient
+            
+            // 2. УСН (доходы-расходы)
+            // Налог = (Доход - Расходы) × Ставка налога
+            resultIncomeMinusCost = (income - costs) * taxCoefficient
+            
+            // 3. OСНО
+            // Налог = (Доход - Расходы) × Ставка налога
+            resultGTS = (income - costs) * taxCoefficient
+        }
+        
+        func calculateNotStandartTaxes() {
+            let income = Double(income) ?? .zero
+            let costs = Double(cost) ?? .zero
+            let taxCoefficient = (Double(rateOfSTSIncome) ?? .zero) / 100
+            let rateOfSTSIncomeMinusExpensesCoef = (Double(rateOfSTSIncomeMinusExpenses) ?? .zero) / 100
+            
+            // 1. Налог = Доход × Ставка УСН (доходы)
+            resultIncome = income * taxCoefficient
+            
+            // 2. УСН (доходы-расходы)
+            resultIncomeMinusCost = income - costs
+            
+            // Налог = (Доход - Расходы) × Ставка УСН (доходы-расходы)
+            // 3. ОСНО (налог на прибыль)
+            resultGTS = (income - costs) * rateOfSTSIncomeMinusExpensesCoef
         }
     }
 }

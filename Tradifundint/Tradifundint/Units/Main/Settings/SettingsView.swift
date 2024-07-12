@@ -19,6 +19,14 @@ struct SettingsView: View {
             Colors.blueMidnight.swiftUIColor
                 .ignoresSafeArea()
             
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Asset.settings.swiftUIImage
+                }
+            }
+            
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 40) {
                     Rectangle()
@@ -81,6 +89,16 @@ struct SettingsView: View {
                                 break
                             case .link:
                                 viewModel.isShareSheetPresented.toggle()
+                            }
+                        }
+                        .frame(height: 63)
+                        
+                        SettingCell(cellType: .support) { action in
+                            switch action {
+                            case .toggle:
+                                break
+                            case .link:
+                                viewModel.openURL(viewModel.supportURL)
                             }
                         }
                         .frame(height: 63)

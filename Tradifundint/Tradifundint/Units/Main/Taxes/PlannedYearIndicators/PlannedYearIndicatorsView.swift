@@ -103,6 +103,7 @@ struct PlannedYearIndicatorsView: View {
                                     viewModel.showNotStandardTaxRate.toggle()
                                 } else {
                                     viewModel.showCalculatingOne.toggle()
+                                    viewModel.calculateStandartTaxes()
                                 }
                             }
                         }

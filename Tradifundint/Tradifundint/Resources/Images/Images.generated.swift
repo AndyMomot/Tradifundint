@@ -38,6 +38,7 @@ internal enum Asset {
   internal static let progress = ImageAsset(name: "progress")
   internal static let roi = ImageAsset(name: "roi")
   internal static let waiting = ImageAsset(name: "waiting")
+  internal static let settings = ImageAsset(name: "settings")
   internal static let projectsTab = ImageAsset(name: "projectsTab")
   internal static let roiTab = ImageAsset(name: "roiTab")
   internal static let settingsTab = ImageAsset(name: "settingsTab")

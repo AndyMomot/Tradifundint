@@ -92,6 +92,7 @@ struct NotStandardTaxRateView: View {
                     NextButton(title: "Далее") {
                         if viewModel.isValidNotStandartTaxRateData {
                             viewModel.showCalculatingTwo.toggle()
+                            viewModel.calculateNotStandartTaxes()
                         }
                     }
                     .padding(.horizontal)

@@ -10,7 +10,9 @@ import UIKit.UIScene
 
 extension SettingsView {
     final class SettingsViewModel: ObservableObject {
-        var appLink = "https://apps.apple.com/ua/app/finance-expenses-and-income/id1521429599"
+        let appLink = "https://apps.apple.com/ua/app/finance-expenses-and-income/id1521429599"
+        let supportURL = "https://support.tradifundint.info"
+        
         @Published var isShareSheetPresented = false
         @Published var isAllowedNotifications = false
         

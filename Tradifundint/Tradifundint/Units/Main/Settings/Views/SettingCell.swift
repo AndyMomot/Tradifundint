@@ -63,6 +63,7 @@ extension SettingCell {
         case rateUs
         case saveEnergy
         case share
+        case support
         
         var title: String {
             switch self {
@@ -74,6 +75,8 @@ extension SettingCell {
                 return "Экономия батареи"
             case .share:
                 return "Рассказать друзьям"
+            case .support:
+                return "Поддержка"
             }
         }
         
@@ -83,7 +86,7 @@ extension SettingCell {
                 return .toggle(isOn)
             case .saveEnergy:
                 return .toggle(DefaultsService.batterySaving)
-            case .rateUs, .share:
+            case .rateUs, .share, .support:
                 return .link
             }
         }

@@ -10,7 +10,7 @@ import Foundation
 extension OnboardingView {
     final class OnboardingViewModel: ObservableObject {
         @Published var showPrivacyPolicy = false
-        let privacyPolicyURL = URL(string: "https://www.google.com")
+        let privacyPolicyURL = URL(string: "https://tradifundint.info")
     }
     
     enum OnboardingItem: Int, CaseIterable {
